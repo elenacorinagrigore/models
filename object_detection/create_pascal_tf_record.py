@@ -39,11 +39,11 @@ from object_detection.utils import label_map_util
 
 flags = tf.app.flags
 flags.DEFINE_string('data_dir', '', 'Root directory to raw PASCAL VOC dataset.')
-flags.DEFINE_enum('set', 'train', ['train', 'val', 'trainval', 'test'],
+flags.DEFINE_string('set', 'train',
                   'Convert training set, validation set or merged set.')
 flags.DEFINE_string('annotations_dir', 'Annotations',
                     '(Relative) path to annotations directory.')
-flags.DEFINE_enum('year', 'VOC2007', ['VOC2007', 'VOC2012', 'merged'],
+flags.DEFINE_string('year', 'VOC2007',
                   'Desired challenge year.')
 flags.DEFINE_string('output_path', '', 'Path to output TFRecord')
 flags.DEFINE_string('label_map_path', 'data/pascal_label_map.pbtxt',
